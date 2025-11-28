@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Year Message for My Love</title>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 20, 147, 0.8); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 25%, #ffb6c1 50%, #ffc0cb 75%, #ff69b4 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 105, 180, 0.2);
+            max-width: 520px;
+            max-height: 90vh;
+            overflow-y: auto;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 192, 203, 0.5);
+            animation: glow 3s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+        .card::-webkit-scrollbar {
+            width: 10px;
+        }
+        .card::-webkit-scrollbar-track {
+            background: rgba(255, 192, 203, 0.2);
+            border-radius: 10px;
+        }
+        .card::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border-radius: 10px;
+        }
+        .card::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #ff1493, #c71585);
+        }
+        h1 {
+            background: linear-gradient(135deg, #ff1493, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        h2 {
+            color: #ff1493;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            margin: 15px 0;
+            letter-spacing: 0.5px;
+        }
+        .heart {
+            font-size: 60px;
+            color: #ff1493;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+        select {
+            padding: 14px 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+            width: 100%;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 24px;
+            padding-right: 40px;
+        }
+        select option {
+            background: linear-gradient(135deg, #fff5f8, #ffffff);
+            color: #333;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        select:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 20, 147, 0.5);
+        }
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.6);
+        }
+        button {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            margin: 8px 5px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        button:nth-child(1) {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+        }
+        button:nth-child(2) {
+            background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+        }
+        button:nth-child(3) {
+            background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+        }
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 20, 147, 0.5);
+        }
+        button:active {
+            transform: translateY(-2px);
+        }
+        #messageDisplay {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 192, 203, 0.3), rgba(255, 240, 245, 0.5));
+            border-radius: 15px;
+            border-left: 4px solid #ff1493;
+            font-size: 16px;
+            color: #555;
+            font-weight: 500;
+            line-height: 1.7;
+            animation: slideIn 0.5s ease-out;
+            box-shadow: inset 0 2px 10px rgba(255, 105, 180, 0.1);
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 2px dashed rgba(255, 105, 180, 0.3);
+        }
+        .cute-pics {
+            font-size: 28px;
+            margin: 15px 0;
+            letter-spacing: 8px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .cute-pics:nth-child(2) { animation-delay: 0.2s; }
+        .cute-pics:nth-child(4) { animation-delay: 0.4s; }
+        .cute-pics:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy New Year, My Love</h1>
+        <div class="heart">❤️</div>
+        <div class="cute-pics">🌹 💑 🎆 💝 🌟</div>
+        <p>
+            As we welcome another year, I just want you to know how grateful I am to have you in my life.
+            Thank you for your love, your patience, and every little moment that made this year special.
+        </p>
+        <div class="cute-pics">💐 🦋 ✨ 🌸 💫</div>
+        <p>
+            I hope this new year brings you peace, joy, and everything your heart wishes for.
+            I'll be here, cheering for you, loving you, and choosing you—always.
+        </p>
+        <div class="cute-pics">🎀 💕 🌺 💖 🎁</div>
+        <p>
+            Here's to another year with you. ✨
+        </p>
+        <div class="cute-pics">🌷 👫 💑 🌙 ⭐</div>
+            <hr style="margin: 25px 0; border: none; border-top: 1px solid #f3c2d4;" />
+        <h2 style="color:#ff6f91; margin-bottom:10px;">Choose a Message</h2>
+        <select onchange="showMessage(this.value)">
+            <option value="">-- Select an Option --</option>
+            <option value="romantic">🌹 Romantic Message</option>
+            <option value="grateful">💝 Grateful Message</option>
+            <option value="funny">😄 Funny Message</option>
+            <option value="hopeful">✨ Hopeful Message</option>
+            <option value="passionate">🔥 Passionate Message</option>
+        </select>
+        <div id="messageDisplay" style="display: none;"></div>
+        <hr />
+        <h2>Quick Messages</h2>
+        <button onclick="alert('You make every year brighter. Happy New Year, my love!')">💖 Sweet Message</button>
+        <button onclick="alert('Thank you for being my safe place. Cheers to another year with you!')">💝 Heartfelt Message</button>
+        <button onclick="alert('New year, same us—but even stronger. I love you!')">✨ Short & Simple</button>
+        <div class="cute-pics" style="margin-top: 20px; font-size: 28px;">💞 🦄 🎊 💗 🌈</div>
+        <script>
+            function showMessage(type) {
+                const display = document.getElementById('messageDisplay');
+                const messages = {
+                    romantic: '🌹 You are my greatest gift. Every moment with you feels like a dream come true. Happy New Year, my love!',
+                    grateful: '💝 Words cannot express my gratitude for having you. Thank you for making every day special. Here\'s to us!',
+                    funny: '😄 New Year, New Us? Nah, let\'s stick with the same amazing us! You\'re stuck with me! 😉',
+                    hopeful: '✨ I believe this year will bring us even closer. Together, there\'s nothing we can\'t achieve. Happy New Year!',
+                    passionate: '🔥 My love for you burns brighter than ever. Happy New Year to the one who makes my heart race!'
+                };
+                if (messages[type]) {
+                    display.textContent = messages[type];
+                    display.style.display = 'block';
+                } else {
+                    display.style.display = 'none';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
